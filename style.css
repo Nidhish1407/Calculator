@@ -1,0 +1,14 @@
+html,body{
+    margin:0;
+    padding:0;
+    background-color: blanchedalmond;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    height:500px;
+    width:400px;
+    background: rgb(210, 194, 224);
+    border:1px solid red;
+}
