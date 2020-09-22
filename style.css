@@ -1,14 +1,67 @@
-html,body{
+html{
     margin:0;
     padding:0;
-    background-color: blanchedalmond;
+    background:linear-gradient(80deg,rgb(217, 148, 20),rgb(233, 213, 125));
+  
+}
+body{
+    margin:0;
+    padding:0;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 .calculator{
-    height:500px;
+    height:500px; 
     width:400px;
     background: rgb(210, 194, 224);
     border:1px solid red;
+}
+.screen{
+    width:370px;
+    height:100px;
+    margin:15px;
+    background: whitesmoke;
+    border:1px solid blue;
+}
+.btn-layout{
+    height:350px;
+    width:370px;
+    margin:15px;
+    border:1px solid red;
+    display:flex;
+    flex-flow:row-wrap;
+}
+.nums{
+    height:260px;
+    width:230px;
+    margin:80px 10px 10px 10px;
+    border:1px solid red;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+}
+div[id|="num"]{
+    height:30px;
+    width:50px;
+    margin:10px;
+    border:1px solid black;
+}
+.operaters{
+    display:inline-block;
+    height:330px;
+    width:110px;
+    margin:10px 10px 10px 0;
+    border:1px solid red;
+
+}
+div[id|="op"]
+{
+    height:30px;
+    width:90px;
+    margin:10px;
+    border:1px solid black;
+} 
+#num-0{
+    width:220px;
 }
