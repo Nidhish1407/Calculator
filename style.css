@@ -1,7 +1,7 @@
 html{
     margin:0;
     padding:0;
-    background:linear-gradient(80deg,rgb(217, 148, 20),rgb(233, 213, 125));
+    background:linear-gradient(160deg,rgb(217, 148, 20),rgb(231, 105, 2));
   
 }
 body{
@@ -14,14 +14,16 @@ body{
 .calculator{
     height:500px; 
     width:400px;
-    background: rgb(210, 194, 224);
+    background: rgb(60, 3, 110);
     border:1px solid red;
+    border-radius:10px;
+   
 }
 .screen{
     width:370px;
     height:100px;
     margin:15px;
-    background: whitesmoke;
+    background:wheat;
     border:1px solid blue;
 }
 .btn-layout{
@@ -32,6 +34,7 @@ body{
     display:flex;
     flex-flow:row-wrap;
 }
+
 .nums{
     height:260px;
     width:230px;
@@ -39,13 +42,25 @@ body{
     border:1px solid red;
     display:flex;
     flex-flow:row wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+   
 }
 div[id|="num"]{
-    height:30px;
-    width:50px;
-    margin:10px;
+    height:62px;
+    width:60px;
+    margin:0px;
     border:1px solid black;
+    font-size: large;
+    font-weight:300;
+    border-radius: 3px;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(221, 218, 67);
+    color:rgb(15, 14, 14);
+    flex-grow:1;
 }
 .operaters{
     display:inline-block;
@@ -57,11 +72,30 @@ div[id|="num"]{
 }
 div[id|="op"]
 {
-    height:30px;
-    width:90px;
-    margin:10px;
+    height:45px;
+    width:105px;
+    margin:0px;
     border:1px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: large;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(135, 135, 125);
+    color:rgb(12, 10, 10);
 } 
 #num-0{
     width:220px;
+}
+#op-1{
+    margin-top: 0px;
+}
+.screen{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2em;
 }
