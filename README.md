@@ -1,1 +1,1 @@
-I made this project as practice an exercise for The Odin Project.
+I made this project as a practice exercise for The Odin Project.
