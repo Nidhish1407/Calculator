@@ -125,10 +125,13 @@ div[id|="op"]
     background-color: rgb(135, 135, 125);
     color:rgb(12, 10, 10);
 } 
-/* #num-0{
-    width:220px;
-} */
-#op-1{
+#op-7{
+    color : green;
+    font-size: 2em;
+    font-weight: bold;
+    background: white;
+}
+#op-1{ 
     margin-top: 0px;
 }
 .screen{
