@@ -23,7 +23,7 @@ function evaluate(e)
     
    for(let i=0;i<exp.length;i++)
    {
-       if(!isNumeric(exp[i]))
+       if(!isNumeric(exp[i]) && i>0)
        {
            var num1 = exp.slice(0,i);
            var op = exp[i];
