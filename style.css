@@ -82,7 +82,7 @@ body{
     align-items: center;
    
 }
-div[id|="num"]{
+#dec,#exp,div[id|="num"]{
     height:62px;
     width:60px;
     margin:0px;
@@ -97,6 +97,9 @@ div[id|="num"]{
     background-color: rgb(221, 218, 67);
     color:rgb(15, 14, 14);
     flex-grow:1;
+}
+#exp{
+    color:green;
 }
 .operaters{
     display:inline-block;
@@ -122,9 +125,9 @@ div[id|="op"]
     background-color: rgb(135, 135, 125);
     color:rgb(12, 10, 10);
 } 
-#num-0{
+/* #num-0{
     width:220px;
-}
+} */
 #op-1{
     margin-top: 0px;
 }
