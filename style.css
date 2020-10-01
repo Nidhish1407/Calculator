@@ -136,7 +136,7 @@ div[id|="op"]
 }
 .screen{
     display:flex;
-    flex-flow:row wrap;
+    flex-flow:column wrap;
     justify-content: flex-end;
     align-items: flex-end;
     font-size: 2em;

@@ -61,7 +61,9 @@ for(let i=0;i<10;i++)
 const operators = document.querySelector(".operaters");
 for(let i=1;i<=6;i++)
 {
-    temp = operators.querySelector(`#op-${i}`).addEventListener('click',(e)=>calculate(e.target.textContent));
+    temp = operators.querySelector(`#op-${i}`);
+    temp.addEventListener('click',(e)=>calculate(e.target.textContent));
+    temp.addEventListener('keypress',(e)=>console.log(e.key));
 }
 operators.querySelector(`#op-7`).addEventListener('click',(e)=>evaluate(e));
 
