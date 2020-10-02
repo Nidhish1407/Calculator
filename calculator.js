@@ -1,7 +1,22 @@
 let exp ='';
 // num1='',num2='',op='';
 const screen = document.querySelector(".screen");
+const allclear = document.querySelector("#Allclear");
+allclear.addEventListener('click',()=>{
+    exp = '';
+    screen.textContent=exp;
+});
+const clear = document.querySelector("#clear");
+clear.addEventListener('click',()=>{
+    exp = exp.slice(0,exp.length-1);
+    screen.textContent=exp;
+});
 
+const del = document.querySelector("#del");
+del.addEventListener('click',()=>{
+    exp = exp.slice(0,exp.length-1);
+    screen.textContent=exp;
+});
 
 
 function add(a,b){return +a + +b;}
