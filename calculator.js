@@ -1,11 +1,13 @@
-let exp ='';
+let exp = '';
 // num1='',num2='',op='';
 const screen = document.querySelector(".screen");
+
 const allclear = document.querySelector("#Allclear");
 allclear.addEventListener('click',()=>{
     exp = '';
     screen.textContent=exp;
 });
+
 const clear = document.querySelector("#clear");
 clear.addEventListener('click',()=>{
     exp = exp.slice(0,exp.length-1);
@@ -28,8 +30,10 @@ function mod(a,b){return a%b;}
 
 
 function isNumeric(value){
-    return /^-?\d+$/.test(value);
+    return /^-?[0-9.,]+/.test(value);
 }
+function isFloat(x) { return !!(x % 1); }
+
 function calculate(n)
 {
    exp+=n;
@@ -40,7 +44,7 @@ function evaluate(e)
     
    for(let i=0;i<exp.length;i++)
    {
-       if(!isNumeric(exp[i]) && i>0)
+       if(!isNumeric(exp[i]))
        {
            var num1 = exp.slice(0,i);
            var op = exp[i];
@@ -48,11 +52,24 @@ function evaluate(e)
            break;
        }
    }
-   exp = operate(op,num1,num2);
+   exp =  operate(op,Number(num1),Number(num2));
+    //   exp =  numType(op,num1,num2);
   
    screen.textContent = exp; 
    exp = '';
-
+}
+function numType(op,num1,num2)
+{
+    if(isFloat(num1))
+    {
+        var num1 = parseFloat(num1);
+    }
+    if(isFloat(num2))
+    {
+        var num2 = parseFloat(num2);
+    }
+    return operate(op,num1,num2);
+   
 }
 function operate(opr,a,b)
 {
@@ -68,11 +85,26 @@ function operate(opr,a,b)
 }
 const numbers = document.querySelector(".nums");
 
-const num = [];let temp;
+let temp;
 for(let i=0;i<10;i++)
 {
     temp = numbers.querySelector(`#num-${i}`).addEventListener('click',(e)=>calculate(e.target.textContent));
 }
+const decimal = numbers.querySelector("#dec");
+decimal.addEventListener('click',()=>{
+     console.log('clicked');
+     if(exp == '')
+    { 
+        exp = '0.';
+        screen.textContent=exp;
+    }
+     else
+     {
+         if(exp[exp.length-1]!= '.')
+         exp+='.';
+         screen.textContent=exp;
+     }
+});
 
 const operators = document.querySelector(".operaters");
 for(let i=1;i<=6;i++)
@@ -83,6 +115,5 @@ for(let i=1;i<=6;i++)
 }
 operators.querySelector(`#op-7`).addEventListener('click',(e)=>evaluate(e));
 
-
-
-
+// console.log(operate(('+',Number(2),Number(3))));
+// console.log(isNumeric('0.2'));
