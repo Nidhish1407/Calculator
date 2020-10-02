@@ -3,23 +3,24 @@ let exp = '';
 const screen = document.querySelector(".screen");
 
 const allclear = document.querySelector("#Allclear");
-allclear.addEventListener('click',()=>{
-    exp = '';
-    screen.textContent=exp;
-});
+allclear.addEventListener('click',allclearSC);
 
 const clear = document.querySelector("#clear");
-clear.addEventListener('click',()=>{
-    exp = exp.slice(0,exp.length-1);
-    screen.textContent=exp;
-});
+clear.addEventListener('click',clearSC);
 
 const del = document.querySelector("#del");
-del.addEventListener('click',()=>{
+del.addEventListener('click',clearSC);
+
+function clearSC()
+{
     exp = exp.slice(0,exp.length-1);
     screen.textContent=exp;
-});
-
+}
+function allclearSC()
+{
+    exp = '';
+    screen.textContent=exp;
+}
 
 function add(a,b){return +a + +b;}
 function sub(a,b){return +a - +b;}
@@ -115,5 +116,15 @@ for(let i=1;i<=6;i++)
 }
 operators.querySelector(`#op-7`).addEventListener('click',(e)=>evaluate(e));
 
-// console.log(operate(('+',Number(2),Number(3))));
-// console.log(isNumeric('0.2'));
+//Adding eventlisteners for keys
+document.addEventListener('keydown',(e)=>{
+    if(e.key == 'Delete')
+    {
+       allclearSC();
+    }
+    else if(e.key == 'Backspace')
+    {
+        clearSC();
+    }
+    
+})

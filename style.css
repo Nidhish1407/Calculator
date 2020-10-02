@@ -14,11 +14,11 @@ body{
 .calculator{
     height:500px; 
     width:400px;
-    background: rgb(60, 3, 110);
+    background: rgb(40, 1, 67);
     border:1px solid red;
     border-radius:10px;
    
-}
+} 
 .screen{
     width:370px;
     height:100px;
