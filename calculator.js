@@ -1,7 +1,9 @@
 let exp ='';
 // num1='',num2='',op='';
 const screen = document.querySelector(".screen");
-screen.textContent = '78';
+
+
+
 function add(a,b){return +a + +b;}
 function sub(a,b){return +a - +b;}
 function mul(a,b){return +a * +b;}
@@ -10,7 +12,7 @@ function pow(a,b){return a**b;}
 function mod(a,b){return a%b;}
 
 
-function isNumeric(value) {
+function isNumeric(value){
     return /^-?\d+$/.test(value);
 }
 function calculate(n)
@@ -55,7 +57,6 @@ const num = [];let temp;
 for(let i=0;i<10;i++)
 {
     temp = numbers.querySelector(`#num-${i}`).addEventListener('click',(e)=>calculate(e.target.textContent));
-    num.push(temp);
 }
 
 const operators = document.querySelector(".operaters");
@@ -63,7 +64,7 @@ for(let i=1;i<=6;i++)
 {
     temp = operators.querySelector(`#op-${i}`);
     temp.addEventListener('click',(e)=>calculate(e.target.textContent));
-    temp.addEventListener('keypress',(e)=>console.log(e.key));
+    
 }
 operators.querySelector(`#op-7`).addEventListener('click',(e)=>evaluate(e));
 

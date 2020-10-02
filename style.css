@@ -136,8 +136,10 @@ div[id|="op"]
 }
 .screen{
     display:flex;
-    flex-flow:column wrap;
+    flex-direction:row;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-end;   
     font-size: 2em;
+    font-weight: 300;
 }
+
